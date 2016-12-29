@@ -2,8 +2,7 @@ FROM ubuntu:16.04
 
 MAINTAINER Ondrej Platek
 
-ENV clean_after_apt_get_install="echo TODO clean after apt-get TODO"
-# ENV clean_after_apt_get_install="$(apt-get clean ; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*)"
+ENV clean_after_apt_get_install="rm -rf /var/lib/apt/lists/*"
 
 RUN apt-get update && \
     apt-get install -y \
